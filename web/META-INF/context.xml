@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/CollectionCommander">
+    
+    <Resource name="jdbc/db_pool" type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              username="p2_user" password="P2!user"
+              validationQuery="SELECT 1" validationQueryTimeout="-1"
+              initialSize="10" logAbandoned="true"
+              maxTotal="100" maxIdle="30"
+              removeAbandonedOnBorrow="true" removeAbandonedOnMaintenance="true"
+              removeAbandonedTimeout="60"
+              testOnBorrow="true" testOnReturn="false"
+              url="jdbc:mysql://localhost:3306/cs425_cc_v1?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
+
+    <Resource name="jdbc/auth" type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              username="p2_auth" password="P2!auth"
+              validationQuery="SELECT 1" validationQueryTimeout="-1"
+              initialSize="10" logAbandoned="true"
+              maxTotal="100" maxIdle="30"
+              removeAbandonedOnBorrow="true" removeAbandonedOnMaintenance="true"
+              removeAbandonedTimeout="60"
+              testOnBorrow="true" testOnReturn="false"
+              url="jdbc:mysql://localhost:3306/cs425_cc_v1?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
+    
+    <Realm dataSourceName="jdbc/auth" localDataSource="true"
+           className="org.apache.catalina.realm.DataSourceRealm"
+           userTable="login" userNameCol="username" userCredCol="password"
+           userRoleTable="userrole" roleNameCol="rolename">
+        
+        <CredentialHandler algorithm="sha-512"
+                           className="org.apache.catalina.realm.MessageDigestCredentialHandler"/>
+        
+    </Realm>
+    
+    <CookieProcessor sameSiteCookies="strict" />
+
+</Context>
