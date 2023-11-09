@@ -1,0 +1,35 @@
+body {
+    background: #E5F9DB;
+    font-family: verdana, arial, sans-serif;
+    font-size: 80%;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+#btn1, #btn2, #btn3{
+    color: #fff;
+    background-color: #83764F;
+    border-color: #83764F;
+    border-radius: 8px;
+    padding: 32px 16px;
+}
+
+#logout{
+    color: #fff;
+    background-color: #83764F;
+    border-color: #83764F;
+    border-radius: 25px;
+    width: 100px;
+}
+
