@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,9 +12,10 @@
         <h1>Welcome to Collection Commander!</h1>
         
         <div class="btn-container">
-           <input id="btn1" type="button" value="New Collection" onclick="">
-            <input id="btn2" type="button" value="View Collection" onclick="">
-            <input id="btn3" type="button" value="Manage Collection" onclick=""> <br><br> 
+           <input id="btn1" type="button" value="New Collection" onclick="window.open('<%= request.getContextPath() %>/main/new_collection.jsp', '_self', false);">
+           <input id="btn2" type="button" value="View Collection" onclick="window.open('<%= request.getContextPath() %>/main/view_collection.jsp', '_self', false);">
+           <input id="btn3" type="button" value="Manage Collection" onclick="">
+           <input id="btn4" type="button" value="Create Report" onclick=""> <br><br>
         </div>
         
         <input id="logout" type="button" value="Logout" onclick="window.open('<%= request.getContextPath() %>/main/logout.jsp', '_self', false);" />
