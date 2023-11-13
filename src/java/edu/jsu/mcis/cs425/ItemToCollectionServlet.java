@@ -9,9 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "ItemServlet", urlPatterns = {"/ItemServlet"})
-public class ItemServlet extends HttpServlet {
-
+@WebServlet(name = "ItemToCollectionServlet", urlPatterns = {"/ItemToCollectionServlet"})
+public class ItemToCollectionServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -21,10 +20,10 @@ public class ItemServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ItemServlet</title>");            
+            out.println("<title>Servlet ItemToCollectionServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ItemServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ItemToCollectionServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -36,11 +35,13 @@ public class ItemServlet extends HttpServlet {
         processRequest(request, response);
     }
 
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
+
 
     @Override
     public String getServletInfo() {

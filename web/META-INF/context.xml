@@ -10,7 +10,7 @@
               removeAbandonedOnBorrow="true" removeAbandonedOnMaintenance="true"
               removeAbandonedTimeout="60"
               testOnBorrow="true" testOnReturn="false"
-              url="jdbc:mysql://localhost:3306/cs425_cc_v1?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
+              url="jdbc:mysql://localhost:3306/cs425_cc_v2?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
 
     <Resource name="jdbc/auth" type="javax.sql.DataSource"
               driverClassName="com.mysql.cj.jdbc.Driver"
@@ -21,7 +21,7 @@
               removeAbandonedOnBorrow="true" removeAbandonedOnMaintenance="true"
               removeAbandonedTimeout="60"
               testOnBorrow="true" testOnReturn="false"
-              url="jdbc:mysql://localhost:3306/cs425_cc_v1?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
+              url="jdbc:mysql://localhost:3306/cs425_cc_v2?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=America/Chicago&amp;allowPublicKeyRetrieval=true&amp;sslMode=DISABLED" />
     
     <Realm dataSourceName="jdbc/auth" localDataSource="true"
            className="org.apache.catalina.realm.DataSourceRealm"

@@ -1,4 +1,4 @@
-package edu.jsu.mcis.cs425;
+package edu.jsu.mcis.cs425.dao;
 
 import java.sql.Connection;
 import javax.naming.Context;
@@ -39,6 +39,18 @@ public class DAOFactory {
 
         return c;
 
+    }
+    
+    public CollectionDAO getCollectionDAO() {
+        return new CollectionDAO(this);
+    }
+    
+    public ItemDAO getItemDAO() {
+        return new ItemDAO(this);
+    }
+    
+    public UserDAO getUserDAO() {
+        return new UserDAO(this);
     }
     
 }
